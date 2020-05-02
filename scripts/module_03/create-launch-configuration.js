@@ -27,7 +27,7 @@ function createLaunchConfiguration(lcName, profileArn) {
         SecurityGroups: [
             sgName
         ],
-        UserData: 'IyEvYmluL2Jhc2gNCnN1ZG8gYXB0LWdldCB1cGRhdGUNCnN1ZG8gYXB0LWdldCAteSBpbnN0YWxsIGdpdA0KZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9hc2hpc2hzYW5vZGlhL2hiZmwuZ2l0IC9ob21lL2JpdG5hbWkvaGJmbA0KY2hvd24gLVIgYml0bmFtaTogL2hvbWUvYml0bmFtaS9oYmZsDQpjZCAvaG9tZS9iaXRuYW1pL2hiZmwNCnN1ZG8gbnBtIGkNCnN1ZG8gbnBtIHJ1biBzdGFydA=='
+        UserData: 'IyEvYmluL2Jhc2gNCmNkIC9ob21lL2JpdG5hbWkvaGJmbA0KZ2l0IHB1bGwgb3JpZ2luIG1hc3Rlcg0Kc3VkbyBucG0gaQ0Kc3VkbyBucG0gcnVuIHN0YXJ0'
     }
 
     return new Promise((resolve, reject) => {
