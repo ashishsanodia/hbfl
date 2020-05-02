@@ -1,13 +1,13 @@
 // Imports
 const AWS = require('aws-sdk')
 
-AWS.config.update({ region: '/* TODO: Add your regions */' })
+AWS.config.update({ region: 'us-east-1' })
 
 // Declare local variables
 const ec2 = new AWS.EC2()
-const sgName = 'hamster_sg'
-const keyName = 'hamster_key'
-const instanceId = '/* TODO: Add the instance Id to stop */'
+const sgName = 'asanodia_sg'
+const keyName = 'asanodia_key'
+const instanceId = 'i-0d7da6ad8bd0989db'
 
 stopInstance(instanceId)
 .then(() => createInstance(sgName, keyName))
@@ -15,13 +15,13 @@ stopInstance(instanceId)
 
 function createInstance (sgName, keyName) {
   const params = {
-    ImageId: '/* TODO: Add ami id for aws linux */',
+    ImageId: 'ami-0be53bbb527c775d6',
     InstanceType: 't2.micro',
     KeyName: keyName,
     MaxCount: 1,
     MinCount: 1,
     Placement: {
-      AvailabilityZone: '/* TODO: Add the az from the instance that is stopping */'
+      AvailabilityZone: 'us-east-1c'
     },
     SecurityGroups: [
       sgName
